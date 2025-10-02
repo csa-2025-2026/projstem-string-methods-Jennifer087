@@ -6,6 +6,11 @@ public class Main
     lastFirstN("cream", "butter", 3);
 
     stringManip ("cream", "butter");
+
+    removeStr ("badaboom", "ada");
+
+    System.out.println (remvoeStr ("bbadaboom", "ada"))
+
   }
 
   /** Precondition: s1 and s2 are not null
@@ -26,7 +31,7 @@ lastN = s1.substring (startPosition);
 
 
   output = lastN + firstN;
-  print.out.println(output);
+  System.out.println(output);
 
   }
 
@@ -37,12 +42,12 @@ lastN = s1.substring (startPosition);
   String Upper;
   String Lower;
 
-  Int LengthOfupper = s1.length();
+  int LengthOfupper = s1.length();
   Upper = s1.toUpperCase();
 
    
-  Lower = s2.substring(0) ;
-  Lower = s2.toLowerCase ();
+  Lower = s2.substring(0,1) ;
+  Lower = s2.toUpperCase();
 
   System.out.println (Upper + Lower);
 
@@ -56,7 +61,15 @@ lastN = s1.substring (startPosition);
   */
   public static String removeStr(String s1, String s2)
   {
-    String output = null;
-    return output;
+    String output;
+    String before;
+    String after;
+    int startOfs2 = s1.indexOf(s2);
+    int endOfs2 = startOfs2 + s2.length ();
+  
+    before s1.substring(0, startOfs2);//from 0 to ada
+    after = s1.substring (endOfs2); // from after ada to end
+    output = before + after;
+   return output;
   }
 }
